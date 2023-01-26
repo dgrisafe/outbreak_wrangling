@@ -10,7 +10,7 @@ We will be using the [Outbreaks](https://urldefense.com/v3/__https://cran.r-proj
 
 ## Book
 
-I will be referencing readings and explinations from the wonderful book [R for Data Science (R4DS)](https://r4ds.had.co.nz/index.html). This book is freely available online. I will link to sections when trying to answer specific questions.
+I will be referencing readings and explanations from the wonderful book [R for Data Science (R4DS)](https://r4ds.had.co.nz/index.html). This book is freely available online. I will link to sections when trying to answer specific questions.
 
 
 ## Asking the Internet
@@ -22,7 +22,7 @@ A large part of learning data science is searching the internet for specific que
 
 There are many ways to become better at R and data science in general. The best way is to do a large number of projects, but many of us don't have the time to do that. Other approaches might be learning specific skills online.
 
-[UCLA Statistical Methods and Data Analytics](https://stats.oarc.ucla.edu/) has excellent statistical analyst resources, many of which are publicly available. They have a page dedicated to [learning R](https://stats.oarc.ucla.edu/r/). Note, they also have excellent resources for learning other statistical softwares: SAS, Stata, SPSS, etc.
+[UCLA Statistical Methods and Data Analytics](https://stats.oarc.ucla.edu/) has excellent statistical analyst resources, many of which are publicly available. They have a page dedicated to [learning R](https://stats.oarc.ucla.edu/r/). Note, they also have excellent resources for learning other statistical software: SAS, Stata, SPSS, etc.
 
 [Coursera](https://www.coursera.org/search?query=R%20programming) has many classes in R programming. These can be purchased, which provides a certificate. But you can also audit the courses for free if you just want to develop your skills and do not care about getting a virtual certificate for your resume. 
 

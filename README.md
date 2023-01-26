@@ -33,7 +33,7 @@ There are many ways to become better at R and data science in general. The best 
 
 ## Questions
  
-1. I have a data set that has the date format as: 11/4/2021  7:00:00 AM. I’d like to get it to just month and year: MM/YY like this. Answer: [1. Lubridate for Dates]()
+1. I have a data set that has the date format as: 11/4/2021  7:00:00 AM. I’d like to get it to just month and year: MM/YY like this. Answer: [1. Lubridate for Dates](https://github.com/dgrisafe/outbreak_wrangling/blob/main/1.-Lubridate-for-Dates.md)
 2. Getting the date in the right format (See "DOB" variable)
 3. Getting time in the right format (see "date_vaccinated")
 4. How to change individual answers to get them in alignment with each other (see "state" variable)

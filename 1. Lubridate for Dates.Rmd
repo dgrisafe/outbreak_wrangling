@@ -1,0 +1,168 @@
+---
+title: "1. Lubridate for Dates"
+author: "Dom Grisafe"
+date: "2023-01-26"
+output: html_document
+---
+
+# Question
+
+> "I have a data set that has the date format as: 11/4/2021  7:00:00 AM. 
+>
+> "I’d like to get it to just month and year: MM/YY like this."
+
+# Answer
+
+We'll use the [lubridate](https://cran.r-project.org/web/packages/lubridate/index.html) package.
+
+Here’s the appropriate section in [R4DS](https://bookdown.org/roy_schumacher/r4ds/dates-and-times.html)
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+I like to load the tidyverse master library in the beginning using `library(tidyverse)`.
+
+The tidyverse library includes many packages often used, including libraries for lubridate and dplyr.
+
+
+## Before we get started: `glimpse()` function
+
+The `glimpse()` function allows us to search any object in R. It is in the dplyr package, an important library in the "Tidyverse".
+
+I sometimes include the package name before a function for learning purposes to emphasize which library the function comes from.
+
+For example, I could write `dplyr:glimpse()`
+
+But from here forward I'll use `glimpse()`
+
+
+## Simulating the starting data
+
+We'll create a vector of dates formatted as they were in the initial question: `11/4/2021  7:00:00 AM`
+
+I arbitrarily chose to make a vector of 20 dates for this example.
+
+Don't worry about how we're doing this for now; it's not important for learning how to answer our question.
+
+```{r, echo=FALSE}
+# function from: https://stackoverflow.com/questions/14720983/efficiently-generate-a-random-sample-of-times-and-dates-between-two-dates
+latemail <- function(N, st="1995/01/01", et="2022/12/31") {
+  st <- as.POSIXct(as.Date(st))
+  et <- as.POSIXct(as.Date(et))
+  dt <- as.numeric(difftime(et,st,unit="sec"))
+  ev <- sort(runif(N, 0, dt))
+  rt <- st + ev
+}
+# print(latemail(10))
+
+# format the date object how the question was asked: https://www.statology.org/r-date-format/
+sample_dates <- latemail(20) %>% format("%m/%d/%y %I:%M:%S %p")
+sample_dates %>% glimpse
+```
+
+
+## Whats the class?
+
+If we look at our vector, we can see which "class" it has using the `class()` function.
+
+```{r}
+# show the current class before parsing
+sample_dates %>% class()
+```
+
+A character class is commonly used in R. It is basically text. It is sometimes called a "string" in other programming languages. But in R we call in "character"
+
+## POSIXct: the class of date and time
+
+Dates are handled best in R using the "POSIXct" class, which is basically an integer with a starting point (e.g., the birth of Christ in year 0, or some other reference point I cannot recall).
+
+Let's use the lubridate package, specifically the `parse_date_time()` function which will convert our "character" class to the "POSIXct" class.
+
+```{r}
+# convert character format into date format (POSIXct)
+sample_dates_posixct <- sample_dates %>% lubridate::parse_date_time("%m/%d/%y %I:%M:%S %p")
+sample_dates_posixct %>% glimpse
+```
+
+After taking a glimpse at our new vector, we see the old character vector is now in the standard "POSIXct" format, which is easy to work with.
+
+Let's check the class specifically again using the `class()` function.
+
+```{r}
+# show the new class after parsing
+sample_dates_posixct %>% class()
+```
+
+But how did we tell the `parse_date_time()` function to interpret the character dates correctly into the POSIXct class?
+
+
+### Formatting date and time in R
+
+We had to supply the formats of our character vector to the function `lubridate:parse_date_time()`
+
+We told the lubridate function our old character vector was in the following format: `%m/%d/%y %I:%M:%S %p`
+
+All date and time formats can be illustrated in R by searching the documentation of the `strptime()` function.
+
+From the documentation, we can see what each piece of the above line means:
+
+`%m` is for "Month as decimal number (01–12)"
+
+`%d` is for "Day of the month as decimal number (01–31)"
+
+See if you can search the documentation for `strptime()` to see what the other codes mean.
+
+
+### Searching the documentation
+
+Call the documentation for any function by typing a question mark before it, without parenthesis: `?strptime()`
+
+This works for any function. Try it out with some of the other functions we've used above:
+
+`?class()`
+
+`?glimpse()`
+
+Reading the documentation is an essential R skill. I use it often to determine how to use a specific function.
+
+
+## Outputting the date as month and year
+
+So our original goal was to convert these dates to just the month and year. 
+
+We can use the lubridate package to create separate vectors of just the month and year.
+
+This is done simply using the `lubridate:month()` and `lubridate:year()` functions.
+
+```{r}
+sample_dates_months <- sample_dates_posixct %>% lubridate::month()
+sample_dates_months %>% glimpse
+
+sample_dates_years <- sample_dates_posixct %>% lubridate::year()
+sample_dates_years %>% glimpse
+```
+
+But we wanted a variable that was month and year
+
+```{r}
+sample_dates_mos_year <- paste0(sample_dates_months, sep = "/", sample_dates_years)
+sample_dates_mos_year %>% glimpse
+```
+
+Check out the documentation for the function `paste0()`
+
+See if you can figure out how it works.
+
+
+## Tibble: putting it all together
+
+Now that we have all these vectors, lets wrap them all up into a tibble, a commonly used object in R. A tibble used to be a data frame, but this is the upgraded version.
+
+```{r}
+tibble(
+  question = sample_dates,
+  answer = sample_dates_mos_year
+)
+```
+

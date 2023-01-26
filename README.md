@@ -24,7 +24,7 @@ There are many ways to become better at R and data science in general. The best 
 
 [UCLA Statistical Methods and Data Analytics](https://stats.oarc.ucla.edu/) has excellent statistical analyst resources, many of which are publicly available. They have a page dedicated to [learning R](https://stats.oarc.ucla.edu/r/). Note, they also have excellent resources for learning other statistical softwares: SAS, Stata, SPSS, etc.
 
-[Coursera](https://www.coursera.org/search?query=R programming) has many classes in R programming. These can be purchased, which provides a certificate. But you can also audit the courses for free if you just want to develop your skills and do not care about getting a virtual certificate for your resume. 
+[Coursera](https://www.coursera.org/search?query=R%20programming) has many classes in R programming. These can be purchased, which provides a certificate. But you can also audit the courses for free if you just want to develop your skills and do not care about getting a virtual certificate for your resume. 
 
 [edX](https://www.edx.org/search?q=r+programming) website also has courses, similar to Coursera. If you're interested in computer programming in general, Harvard's [Intro to Computer Science](https://www.edx.org/course/introduction-computer-science-harvardx-cs50x) is a great place to start. edX courses can also be audited for free.
 

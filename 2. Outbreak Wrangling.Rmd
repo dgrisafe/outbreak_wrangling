@@ -55,7 +55,7 @@ Part of data science is always being skeptical about the data. This is an exampl
 
 Data cleaning is usually the bulk of working with data. I've heard people say it's 80% cleaning data and 20% doing actual analysis. This is surprising for many when first learning data science.
 
-Let's save this data without mistakes in incubation timeline for the remaining discussions.
+Let's save this data that excludes the mistakes in incubation-timeline for the remaining discussion.
 
 ```{r}
 # remove the rows of data that have nonsense incubation periods

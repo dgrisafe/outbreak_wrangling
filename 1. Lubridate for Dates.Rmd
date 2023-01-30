@@ -47,6 +47,7 @@ Don't worry about how we're doing this for now; it's not important for learning 
 
 ```{r, echo=FALSE}
 # function from: https://stackoverflow.com/questions/14720983/efficiently-generate-a-random-sample-of-times-and-dates-between-two-dates
+set.seed(123)
 latemail <- function(N, st="1995/01/01", et="2022/12/31") {
   st <- as.POSIXct(as.Date(st))
   et <- as.POSIXct(as.Date(et))
@@ -160,9 +161,9 @@ See if you can figure out how it works.
 Now that we have all these vectors, lets wrap them all up into a tibble, a commonly used object in R. A tibble used to be a data frame, but this is the upgraded version.
 
 ```{r}
-tibble(
-  question = sample_dates,
-  answer = sample_dates_mos_year
+tibble::tibble(
+  "question" = sample_dates,
+  "answer" = sample_dates_mos_year
 )
 ```
 

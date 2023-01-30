@@ -36,8 +36,8 @@ There are many ways to become better at R and data science in general. The best 
 * [1. Lubridate for Dates](https://github.com/dgrisafe/outbreak_wrangling/blob/main/1.-Lubridate-for-Dates.md) 
   * "I have a data set that has the date format as: 11/4/2021  7:00:00 AM. I’d like to get it to just month and year: MM/YY like this.""  
 * [2. Outbreak Wrangling](https://github.com/dgrisafe/outbreak_wrangling/blob/main/2.-Outbreak-Wrangling.md)
-  * [2.1 Dates and Times]() "How do I get date and time variables in the right format (e.g., date of birth, date of infection)?"
-  * [2.2 Factors: Categorical Variables]() "How do I change individual answers to get them in alignment with each other (e.g., hospital, state)?"
+  * [2.1 Dates and Times](https://github.com/dgrisafe/outbreak_wrangling/blob/main/2.-Outbreak-Wrangling.md#21-dates-and-times) "How do I get date and time variables in the right format (e.g., date of birth, date of infection)?"
+  * [2.2 Factors: Categorical Variables](https://github.com/dgrisafe/outbreak_wrangling/blob/main/2.-Outbreak-Wrangling.md#22-factors-categorical-variables) "How do I change individual answers to get them in alignment with each other (e.g., hospital, state)?"
   
 * How to create a new variable that lumps other variables together (lump "state" variable into regions)
 * How to change variable names to something more user friendly (See "Last Name")

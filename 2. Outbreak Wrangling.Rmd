@@ -69,6 +69,8 @@ data_ebola_2.1 %>% glimpse
 ## Question
 
 > "How do I change individual answers to get them in alignment with each other (e.g., hospital, state)?"
+>
+> "Considerations when dealing with "Other" in categorical variables (e.g., hospital)"
 
 ## Answer
 
@@ -129,7 +131,7 @@ ebola_hosp_2 <- ebola_hosp_1 %>% str_replace_all("Mitylira", "Military")
 ebola_hosp_2 %>% table()
 ```
 
-No we have 4 unique hospitals as well as an "other" category, for a total of 5 distinct categories.
+Now we have 4 unique hospitals as well as an "other" category, for a total of 5 distinct categories.
 
 ### Creating ordered factors with `factor()`
 
@@ -188,12 +190,6 @@ Looks the same!
 <!-- #  6. Renaming variables: camelCase, snake_case, names() or dplyr:rename() -->
 
 <!-- [R4DS Whats in a name?](https://r4ds.had.co.nz/workflow-basics.html#whats-in-a-name) -->
-
-<!-- # 7. role, other -->
-
-<!-- [R4DS Factors](https://r4ds.had.co.nz/factors.html) -->
-
-<!-- Use factors to make categories, ordinal factors with “other” at end -->
 
 <!-- # 8. Race: dashes and slashes -->
 

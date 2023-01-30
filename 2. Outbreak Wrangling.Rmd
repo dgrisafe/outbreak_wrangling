@@ -1,0 +1,23 @@
+---
+title: "2. Outbreak Wrangling"
+author: "Dom Grisafe"
+date: "2023-01-30"
+output: rmarkdown::github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(outbreaks)
+```
+
+## 2.1 Dates and Times
+
+I discuss formatting date and times in my previous post [1.-Lubridate-for-Dates](https://github.com/dgrisafe/outbreak_wrangling/blob/main/1.-Lubridate-for-Dates.md#posixct-the-class-of-date-and-time)
+
+The first goal is getting these variables in the "POSIXct" class.
+
+Further reading is also available in the book [R4DS](https://r4ds.had.co.nz/dates-and-times.html)
+
+
+

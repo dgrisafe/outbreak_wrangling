@@ -34,14 +34,15 @@ There are many ways to become better at R and data science in general. The best 
 ## Questions
  
 1. I have a data set that has the date format as: 11/4/2021  7:00:00 AM. I’d like to get it to just month and year: MM/YY like this. Answer: [1. Lubridate for Dates](https://github.com/dgrisafe/outbreak_wrangling/blob/main/1.-Lubridate-for-Dates.md)
-2. Getting the date in the right format (See "DOB" variable)
-3. Getting time in the right format (see "date_vaccinated")
-4. How to change individual answers to get them in alignment with each other (see "state" variable)
-5. How to create a new variable that lumps other variables together (lump "state" variable into regions)
-6. How to change variable names to something more user friendly (See "Last Name")
-7. Considerations when dealing with "Other" -- see "role" variable
-8. How to deal with dashes and slashes in the answer (see "race" variable)
-9. How to deal with multiple responses to a question - switching from vertical to horizontal (see "activities" with a comma, * "mode" with a semi colon, "symptoms" with a comma)
-10. Horizontal to vertical (combining breakfast and lunch foods into one variable for examples)
-11. How to deal with N/A (see "vaccinated" variable)
-12. How to deal with missing values (see "occupation", "date_exposure" among others)
+2. [2. Outbreak Wrangling]()
+2.1 Getting date and time variables in the right format (e.g., date of birth, date of vaccination)
+
+* How to change individual answers to get them in alignment with each other (see "state" variable)
+* How to create a new variable that lumps other variables together (lump "state" variable into regions)
+* How to change variable names to something more user friendly (See "Last Name")
+* Considerations when dealing with "Other" -- see "role" variable
+* How to deal with dashes and slashes in the answer (see "race" variable)
+* How to deal with multiple responses to a question - switching from vertical to horizontal (see "activities" with a comma, * "mode" with a semi colon, "symptoms" with a comma)
+* Horizontal to vertical (combining breakfast and lunch foods into one variable for examples)
+* How to deal with N/A (see "vaccinated" variable)
+* How to deal with missing values (see "occupation", "date_exposure" among others)

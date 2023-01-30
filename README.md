@@ -33,9 +33,9 @@ There are many ways to become better at R and data science in general. The best 
 
 ## Questions
  
-[1. Lubridate for Dates](https://github.com/dgrisafe/outbreak_wrangling/blob/main/1.-Lubridate-for-Dates.md) I have a data set that has the date format as: 11/4/2021  7:00:00 AM. I’d like to get it to just month and year: MM/YY like this.  
-[2. Outbreak Wrangling](https://github.com/dgrisafe/outbreak_wrangling/blob/main/2.-Outbreak-Wrangling.md)
-2.1 Getting date and time variables in the right format (e.g., date of birth, date of vaccination)
+* [1. Lubridate for Dates](https://github.com/dgrisafe/outbreak_wrangling/blob/main/1.-Lubridate-for-Dates.md) I have a data set that has the date format as: 11/4/2021  7:00:00 AM. I’d like to get it to just month and year: MM/YY like this.  
+* [2. Outbreak Wrangling](https://github.com/dgrisafe/outbreak_wrangling/blob/main/2.-Outbreak-Wrangling.md)
+  * 2.1 Getting date and time variables in the right format (e.g., date of birth, date of vaccination)
 
 * How to change individual answers to get them in alignment with each other (see "state" variable)
 * How to create a new variable that lumps other variables together (lump "state" variable into regions)

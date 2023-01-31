@@ -181,11 +181,40 @@ data_ebola_2.2$hospital %>% table()
 Looks the same!
 
 
-<!-- # 5. Factors, dplyr:case_when() -->
+## 2.3 Creating a factor variable from cases of another factor with `dplyr::case_when()`
 
-<!-- [R4DS Factors](https://r4ds.had.co.nz/factors.html) -->
+```{r, warning=FALSE, cache=TRUE}
+library(mapview)
+library(leaflet)
+map_ebola_2.2 <- mapview(data_ebola_2.2, xcol = "lon", ycol = "lat", crs = 4269, grid = FALSE)
+mapshot(map_ebola_2.2, file = "map_ebola_2.2.png", remove_controls = NULL)
 
-<!-- Creating a region variable based on the states using case_when() and then factors to format ordinal variables -->
+# get median longitude and latitude
+med_lon <- median(data_ebola_2.2$lon)
+med_lat <- median(data_ebola_2.2$lat)
+
+# create new variable "geoquad" that identifies which quadrant each case is in
+data_ebola_2.3 <- data_ebola_2.2 %>% 
+  mutate(
+    geoquad = case_when(
+      lon > med_lon & lat > med_lat ~ 1,
+      lon > med_lon & lat < med_lat ~ 2,
+      lon < med_lon & lat < med_lat ~ 3,
+      lon < med_lon & lat > med_lat ~ 4,
+    ) %>% factor(
+      levels = c(1, 2, 3, 4),
+      labels = c("Northeast", "Southeast", "Southwest", "Northwest")
+    )
+  )
+
+cols1 <- c('red', 'green', 'blue', 'yellow')
+colPal <- leaflet::colorFactor(palette = cols1, levels = levels(data_ebola_2.3$geoquad))
+map_ebola_2.3 <- mapview(data_ebola_2.3, xcol = "lon", ycol = "lat", crs = 4269, grid = FALSE, zcol = "geoquad", col.regions = colPal(data_ebola_2.3$geoquad))
+mapshot(map_ebola_2.3, file = "map_ebola_2.3.png")
+```
+
+![](map_ebola_2.2.png)
+![](map_ebola_2.3.png)
 
 <!-- #  6. Renaming variables: camelCase, snake_case, names() or dplyr:rename() -->
 

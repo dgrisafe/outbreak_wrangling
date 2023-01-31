@@ -38,7 +38,7 @@ There are many ways to become better at R and data science in general. The best 
 * [2. Outbreak Wrangling](https://github.com/dgrisafe/outbreak_wrangling/blob/main/2.-Outbreak-Wrangling.md)
   * [2.1 Dates and Times](https://github.com/dgrisafe/outbreak_wrangling/blob/main/2.-Outbreak-Wrangling.md#21-dates-and-times) "How do I get date and time variables in the right format (e.g., date of birth, date of infection)?"
   * [2.2 Factors: Categorical Variables](https://github.com/dgrisafe/outbreak_wrangling/blob/main/2.-Outbreak-Wrangling.md#22-factors-categorical-variables) "How do I change individual answers to get them in alignment with each other (e.g., hospital, state)? Considerations when dealing with 'other' in categorical variables (e.g., hospital)?"
-  * [2.3 Creating variables conditional on existing variables]() "How to create a new variable that lumps other variables together (e.g., categorize a continuous variable into factors, lump "state" variable into regions)"
+  * [2.3 Creating variables conditional on existing variables](https://github.com/dgrisafe/outbreak_wrangling/blob/main/2.-Outbreak-Wrangling.md#23-creating-variables-conditional-on-existing-variables) "How to create a new variable that lumps other variables together (e.g., categorize a continuous variable into factors, lump "state" variable into regions)"
   
 * How to change variable names to something more user friendly (See "Last Name")
 * How to deal with dashes and slashes in the answer (see "race" variable)

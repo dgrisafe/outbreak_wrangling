@@ -2,7 +2,10 @@
 title: "1. Lubridate for Dates"
 author: "Dom Grisafe"
 date: "2023-01-26"
-output: rmarkdown::github_document
+output: 
+  rmarkdown::github_document:
+    toc: true
+    toc_depth: 3
 ---
 
 # Question

@@ -10,7 +10,7 @@ We will be using the [Outbreaks](https://urldefense.com/v3/__https://cran.r-proj
 
 ## Book
 
-I will be referencing readings and explanations from the wonderful book [R for Data Science (R4DS)](https://r4ds.had.co.nz/index.html). This book is freely available online. I will link to sections when trying to answer specific questions.
+I will be referencing readings and explanations from the wonderful book [R for Data Science (R4DS)](https://r4ds.hadley.nz/). This book is freely available online. I will link to sections when trying to answer specific questions.
 
 
 ## Asking the Internet
